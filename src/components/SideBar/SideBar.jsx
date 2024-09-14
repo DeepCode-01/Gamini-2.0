@@ -4,11 +4,11 @@ import {assets} from "../../assets/assets"
 
 const SideBar = () => {
   return (
-    <div className='sidebar'>
+    <div className='sidebar min-h-full inline-flex flex-col justify-between bg-[#f0f4f9]'>
         <div className="top">
-            <img className="menu" src={assets.menu_icon} alt="" />
+            <img className="menu block ml-2 cursor-pointer" src={assets.menu_icon} alt="" />
             <div className="new-chat">
-                <img src={assets.plus_icon} alt="" />
+                <img className='w-1' src={assets.plus_icon} alt="" />
                 <p>New Chat</p>
             </div>
             <div className="recent">

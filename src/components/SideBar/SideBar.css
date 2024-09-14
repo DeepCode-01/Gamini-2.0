@@ -1,15 +1,9 @@
-.sidebar{
-    min-height: 100vh;
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #f0f4f9;
-}
-.sidebar img{
+
+/* .sidebar img{
     width:1.8em;
 }
 .sidebar .menu{
   display: block;
   margin-left: 1.7em;
   cursor: pointer;
-}
+} */
