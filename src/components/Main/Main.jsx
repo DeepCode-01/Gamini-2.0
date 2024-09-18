@@ -1,5 +1,11 @@
 import { assets } from "../../assets/assets";
+import React, { useContext } from "react";
+import { Context } from "../../context/context";
+
 const Main = () => {
+
+  const {onSent, recentPrompt, showResult, loading, resultData, setInput, input} = useContext(Context);
+
   return (
     <div className="main flex-1 min-h-full pb-40 relative text-xl p-5 text-[#585858]">
       <div className="nav flex items-center justify-between">
@@ -63,11 +69,11 @@ const Main = () => {
         </div>
         <div className="main-bottom absolute bottom-0 w-[100%] max-w-[900px] py-0 px-5 m-auto">
           <div className="search-box flex items-center justify-between gap-5 bg-[#f0f4f9] py-2 px-5 rounded-full">
-            <input type="text" placeholder="Enter your prompt here..." className="flex-1 bg-transparent border-none outline-none p-2 text-base"/>
+            <input onChange={(e)=>setInput(e.target.value)} value={input} type="text" placeholder="Enter your prompt here..." className="flex-1 bg-transparent border-none outline-none p-2 text-base"/>
             <div className="flex justify-start gap-4">
               <img className="w-6 cursor-pointer inline-block" src={assets.gallery_icon} alt="" />
               <img className="w-6 cursor-pointer inline-block" src={assets.mic_icon} alt="" />
-              <img className="w-6 cursor-pointer inline-block" src={assets.send_icon} alt="" />
+              <img onClick={()=>onSent} className="w-6 cursor-pointer inline-block" src={assets.send_icon} alt="" />
             </div>
           </div>
           <p className="bottom-info text-sm my-4 mx-auto text-center font-light">
