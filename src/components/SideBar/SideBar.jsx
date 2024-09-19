@@ -1,14 +1,17 @@
-import { useState } from "react";
-// import "./SideBar.css"
+import { Fragment, useContext, useState } from "react";
+
 import { assets } from "../../assets/assets";
+import { Context } from "../../context/context";
 
 const SideBar = () => {
   const [extented, setExtented] = useState(false);
+  const { onSent, PrevPrompt, setRecentPrompt } = useContext(Context);
 
   return (
     <div className="sidebar min-h-full inline-flex flex-col justify-between bg-[#f0f4f9] py-5 px-3">
       <div className="top">
-        <img onClick={()=>setExtented(prev=>!prev)}
+        <img
+          onClick={() => setExtented((prev) => !prev)}
           className="menu w-6 block ml-4 cursor-pointer"
           src={assets.menu_icon}
           alt=""
@@ -20,10 +23,16 @@ const SideBar = () => {
         {extented ? (
           <div className="recent flex flex-col">
             <p className="recent-title mt-7 mb-5">Recent</p>
-            <div className="recent-entry flex items-start gap-2 p-2 pr-10 rounded-full text-[#282828] cursor-pointer hover:bg-[#e2e6eb]">
-              <img className="w-6" src={assets.message_icon} alt="" />
-              <p>What is react....</p>
-            </div>
+            {PrevPrompt.map((item, index) => {
+              return (
+                <>
+                  <div className="recent-entry flex items-start gap-2 p-2 pr-10 rounded-full text-[#282828] cursor-pointer hover:bg-[#e2e6eb]">
+                    <img className="w-6" src={assets.message_icon} alt="" />
+                    <p>{item}...</p>
+                  </div>
+                </>
+              );
+            })}
           </div>
         ) : null}
       </div>
