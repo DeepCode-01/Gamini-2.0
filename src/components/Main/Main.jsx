@@ -85,7 +85,7 @@ const Main = () => {
               <hr className=" rounded-md border-0 bg-[#f6f7f8] bg-gradient-to-r from-[#9ed7ff] via-[#ffffff] to-[#9ed7ff] bg-[length:800px_50px] h-5" />
               <hr className=" rounded-md border-0 bg-[#f6f7f8] bg-gradient-to-r from-[#9ed7ff] via-[#ffffff] to-[#9ed7ff] bg-[length:800px_50px] h-5" />
             </div>
-          :<p className="text-base font-light leading-8 " dangerouslySetInnerHTML={{__html:resultData}}></p>}
+          :<p className="text-base  leading-8 " dangerouslySetInnerHTML={{__html: resultData }}></p>}
             
           </div>
         </div>
