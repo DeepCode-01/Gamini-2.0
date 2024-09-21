@@ -12,6 +12,7 @@
 #root{
   min-height: 100vh;
   display: flex;
+  animation: fadeIn 1.5s;
 }
 .result::-webkit-scrollbar{
   display: none;
@@ -26,5 +27,36 @@
   }
   100%{
     background-position: 800px 0px;
+  }
+}
+
+@keyframes fadeIn {
+  0%{
+ opacity: 0;
+  }
+  100%{
+opacity: 1;
+  }
+}
+
+.sidebar .recent{
+  animation: fadeIn 1.5s;
+}
+
+@media screen and (max-width:600px) {
+  .sidebar{
+    display: none;
+  }
+
+  .main-bottom input{
+    flex: none;
+    width: 150px;
+  }
+  .main-bottom img{
+    width: 20px;
+  }
+
+  .search-box div{
+    gap: 5px;
   }
 }

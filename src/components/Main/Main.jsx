@@ -16,17 +16,18 @@ const Main = () => {
 
         {!showResult
         ? <Fragment>
-           <div className="greet my-7 mx-0 text-5xl text-[#c4c7c5] font-medium p-5">
+           <div className="greet my-7 mx-0 text-5xl text-[#c4c7c5] font-medium p-5 ">
           <p>
             <span className="bg-gradient-to-r from-[#4b90ff] to-[#ff5546] bg-gradient-[16deg] bg-clip-text text-transparent">
-              Hello, Dev.
+              Hello, Deepali.
             </span>
           </p>
           <p className="mt-2">How can I help you today?</p>
         </div>
-        <div className="cards grid grid-cols-4 gap-4 p-5">
+        <div className="cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-5">
+
           <div className="card h-50 p-6 bg-[#f0f4f9] rounded-lg relative cursor-pointer hover:bg-[#dfe4ea]">
-            <p className="text-[#585858] text-base">
+            <p className="text-[#585858] text-base ">
               suggest beautiful places to see on an upcoming road trip{" "}
             </p>
             <img
@@ -93,7 +94,7 @@ const Main = () => {
 
 
        
-        <div className="main-bottom absolute bottom-0 w-[100%] max-w-[900px] py-0 px-5 m-auto">
+        <div className="main-bottom absolute bottom-0 w-[100%] max-w-[900px]  py-0 px-5 m-auto">
           <div className="search-box flex items-center justify-between gap-5 bg-[#f0f4f9] py-2 px-5 rounded-full">
             <input onChange={(e)=>setInput(e.target.value)} value={input} type="text" placeholder="Enter your prompt here..." className="flex-1 bg-transparent border-none outline-none p-2 text-base"/>
             <div className="flex justify-start gap-4">
